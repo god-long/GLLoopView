@@ -40,7 +40,12 @@ class CirCleView: UIView, UIScrollViewDelegate {
         didSet {
             //这里用了强制拆包，所以不要把urlImageArray设为nil
             for urlStr in self.urlImageArray! {
-                var tempImage = UIImage(data: NSData(contentsOfURL: NSURL(string: urlStr)!)!)
+                var urlImage = NSURL(string: urlStr)
+                if urlImage == nil { break }
+                var dataImage = NSData(contentsOfURL: urlImage!)
+                if dataImage == nil { break }
+                var tempImage = UIImage(data: dataImage!)
+                if tempImage == nil { break }
                 imageArray.append(tempImage)
             }
         }
@@ -100,6 +105,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         currentImageView.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
         currentImageView.userInteractionEnabled = true
         currentImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        currentImageView.clipsToBounds = true
         contentScrollView.addSubview(currentImageView)
         
         //添加点击事件
@@ -109,12 +115,15 @@ class CirCleView: UIView, UIScrollViewDelegate {
         self.lastImageView = UIImageView()
         lastImageView.frame = CGRectMake(0, 0, self.frame.size.width, 200)
         lastImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        lastImageView.clipsToBounds = true
         contentScrollView.addSubview(lastImageView)
         
         self.nextImageView = UIImageView()
         nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
         nextImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        nextImageView.clipsToBounds = true
         contentScrollView.addSubview(nextImageView)
+        
         self.setScrollViewOfImage()
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
         
@@ -192,18 +201,10 @@ class CirCleView: UIView, UIScrollViewDelegate {
         scrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
     }
     
+    //时间触发器 设置滑动时动画true，会触发的方法
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
         print("animator")
-        var offset = scrollView.contentOffset.x
-        if offset == 0 {
-            self.indexOfCurrentImage = self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
-        }else if offset == self.frame.size.width * 2 {
-            self.indexOfCurrentImage = self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
-        }
-        // 重新布局图片
-        self.setScrollViewOfImage()
-        //布局后把contentOffset设为中间
-        scrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        self.scrollViewDidEndDecelerating(contentScrollView)
     }
     
 
