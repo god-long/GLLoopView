@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		548AFB9A1B46700F0047EC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AFB991B46700F0047EC41 /* AppDelegate.swift */; };
+		548AFBA11B46700F0047EC41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548AFBA01B46700F0047EC41 /* Images.xcassets */; };
+		548AFBA41B46700F0047EC41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548AFBA21B46700F0047EC41 /* LaunchScreen.xib */; };
+		548AFBB01B46700F0047EC41 /* GLCircleScrollVeiwTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AFBAF1B46700F0047EC41 /* GLCircleScrollVeiwTests.swift */; };
+		548AFBBA1B4670F70047EC41 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AFBB91B4670F70047EC41 /* FirstVC.swift */; };
+		548AFBBE1B4672D50047EC41 /* CirCleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AFBBD1B4672D50047EC41 /* CirCleView.swift */; };
+		548AFBC61B4682800047EC41 /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 548AFBC31B4682800047EC41 /* third.jpg */; };
+		548AFBC71B4682800047EC41 /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 548AFBC41B4682800047EC41 /* second.jpg */; };
+		548AFBC81B4682800047EC41 /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 548AFBC51B4682800047EC41 /* first.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		548AFBAA1B46700F0047EC41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 548AFB8C1B46700E0047EC41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 548AFB931B46700F0047EC41;
+			remoteInfo = GLCircleScrollVeiw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		548AFB941B46700F0047EC41 /* GLCircleScrollVeiw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLCircleScrollVeiw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		548AFB981B46700F0047EC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		548AFB991B46700F0047EC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		548AFBA01B46700F0047EC41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		548AFBA31B46700F0047EC41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		548AFBA91B46700F0047EC41 /* GLCircleScrollVeiwTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLCircleScrollVeiwTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		548AFBAE1B46700F0047EC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		548AFBAF1B46700F0047EC41 /* GLCircleScrollVeiwTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCircleScrollVeiwTests.swift; sourceTree = "<group>"; };
+		548AFBB91B4670F70047EC41 /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		548AFBBD1B4672D50047EC41 /* CirCleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleView.swift; sourceTree = "<group>"; };
+		548AFBC31B4682800047EC41 /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = third.jpg; sourceTree = "<group>"; };
+		548AFBC41B4682800047EC41 /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
+		548AFBC51B4682800047EC41 /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		548AFB911B46700F0047EC41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		548AFBA61B46700F0047EC41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		548AFB8B1B46700E0047EC41 = {
+			isa = PBXGroup;
+			children = (
+				548AFB961B46700F0047EC41 /* GLCircleScrollVeiw */,
+				548AFBAC1B46700F0047EC41 /* GLCircleScrollVeiwTests */,
+				548AFB951B46700F0047EC41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		548AFB951B46700F0047EC41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				548AFB941B46700F0047EC41 /* GLCircleScrollVeiw.app */,
+				548AFBA91B46700F0047EC41 /* GLCircleScrollVeiwTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		548AFB961B46700F0047EC41 /* GLCircleScrollVeiw */ = {
+			isa = PBXGroup;
+			children = (
+				548AFBC31B4682800047EC41 /* third.jpg */,
+				548AFBC41B4682800047EC41 /* second.jpg */,
+				548AFBC51B4682800047EC41 /* first.jpg */,
+				548AFB991B46700F0047EC41 /* AppDelegate.swift */,
+				548AFBB91B4670F70047EC41 /* FirstVC.swift */,
+				548AFBBD1B4672D50047EC41 /* CirCleView.swift */,
+				548AFBA01B46700F0047EC41 /* Images.xcassets */,
+				548AFBA21B46700F0047EC41 /* LaunchScreen.xib */,
+				548AFB971B46700F0047EC41 /* Supporting Files */,
+			);
+			path = GLCircleScrollVeiw;
+			sourceTree = "<group>";
+		};
+		548AFB971B46700F0047EC41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				548AFB981B46700F0047EC41 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		548AFBAC1B46700F0047EC41 /* GLCircleScrollVeiwTests */ = {
+			isa = PBXGroup;
+			children = (
+				548AFBAF1B46700F0047EC41 /* GLCircleScrollVeiwTests.swift */,
+				548AFBAD1B46700F0047EC41 /* Supporting Files */,
+			);
+			path = GLCircleScrollVeiwTests;
+			sourceTree = "<group>";
+		};
+		548AFBAD1B46700F0047EC41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				548AFBAE1B46700F0047EC41 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		548AFB931B46700F0047EC41 /* GLCircleScrollVeiw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 548AFBB31B46700F0047EC41 /* Build configuration list for PBXNativeTarget "GLCircleScrollVeiw" */;
+			buildPhases = (
+				548AFB901B46700F0047EC41 /* Sources */,
+				548AFB911B46700F0047EC41 /* Frameworks */,
+				548AFB921B46700F0047EC41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLCircleScrollVeiw;
+			productName = GLCircleScrollVeiw;
+			productReference = 548AFB941B46700F0047EC41 /* GLCircleScrollVeiw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		548AFBA81B46700F0047EC41 /* GLCircleScrollVeiwTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 548AFBB61B46700F0047EC41 /* Build configuration list for PBXNativeTarget "GLCircleScrollVeiwTests" */;
+			buildPhases = (
+				548AFBA51B46700F0047EC41 /* Sources */,
+				548AFBA61B46700F0047EC41 /* Frameworks */,
+				548AFBA71B46700F0047EC41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				548AFBAB1B46700F0047EC41 /* PBXTargetDependency */,
+			);
+			name = GLCircleScrollVeiwTests;
+			productName = GLCircleScrollVeiwTests;
+			productReference = 548AFBA91B46700F0047EC41 /* GLCircleScrollVeiwTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		548AFB8C1B46700E0047EC41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "___GL___";
+				TargetAttributes = {
+					548AFB931B46700F0047EC41 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					548AFBA81B46700F0047EC41 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 548AFB931B46700F0047EC41;
+					};
+				};
+			};
+			buildConfigurationList = 548AFB8F1B46700E0047EC41 /* Build configuration list for PBXProject "GLCircleScrollVeiw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 548AFB8B1B46700E0047EC41;
+			productRefGroup = 548AFB951B46700F0047EC41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				548AFB931B46700F0047EC41 /* GLCircleScrollVeiw */,
+				548AFBA81B46700F0047EC41 /* GLCircleScrollVeiwTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		548AFB921B46700F0047EC41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548AFBA41B46700F0047EC41 /* LaunchScreen.xib in Resources */,
+				548AFBC71B4682800047EC41 /* second.jpg in Resources */,
+				548AFBA11B46700F0047EC41 /* Images.xcassets in Resources */,
+				548AFBC61B4682800047EC41 /* third.jpg in Resources */,
+				548AFBC81B4682800047EC41 /* first.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		548AFBA71B46700F0047EC41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		548AFB901B46700F0047EC41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548AFB9A1B46700F0047EC41 /* AppDelegate.swift in Sources */,
+				548AFBBA1B4670F70047EC41 /* FirstVC.swift in Sources */,
+				548AFBBE1B4672D50047EC41 /* CirCleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		548AFBA51B46700F0047EC41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548AFBB01B46700F0047EC41 /* GLCircleScrollVeiwTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		548AFBAB1B46700F0047EC41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 548AFB931B46700F0047EC41 /* GLCircleScrollVeiw */;
+			targetProxy = 548AFBAA1B46700F0047EC41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		548AFBA21B46700F0047EC41 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				548AFBA31B46700F0047EC41 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		548AFBB11B46700F0047EC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		548AFBB21B46700F0047EC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		548AFBB41B46700F0047EC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLCircleScrollVeiw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		548AFBB51B46700F0047EC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLCircleScrollVeiw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		548AFBB71B46700F0047EC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLCircleScrollVeiwTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLCircleScrollVeiw.app/GLCircleScrollVeiw";
+			};
+			name = Debug;
+		};
+		548AFBB81B46700F0047EC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLCircleScrollVeiwTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLCircleScrollVeiw.app/GLCircleScrollVeiw";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		548AFB8F1B46700E0047EC41 /* Build configuration list for PBXProject "GLCircleScrollVeiw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				548AFBB11B46700F0047EC41 /* Debug */,
+				548AFBB21B46700F0047EC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		548AFBB31B46700F0047EC41 /* Build configuration list for PBXNativeTarget "GLCircleScrollVeiw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				548AFBB41B46700F0047EC41 /* Debug */,
+				548AFBB51B46700F0047EC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		548AFBB61B46700F0047EC41 /* Build configuration list for PBXNativeTarget "GLCircleScrollVeiwTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				548AFBB71B46700F0047EC41 /* Debug */,
+				548AFBB81B46700F0047EC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 548AFB8C1B46700E0047EC41 /* Project object */;
+}
