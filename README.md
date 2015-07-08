@@ -10,6 +10,9 @@
    
    > 可设置图片Url的数组（如果要赋url数组的话，最好自己改成sd加载图片的方式）
 
+
+    ![](https://github.com/god-long/GLCircleScrollView/raw/master/Circle.gif) 
+
    
 * 使用方法：
 
