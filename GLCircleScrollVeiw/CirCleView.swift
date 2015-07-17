@@ -179,6 +179,11 @@ class CirCleView: UIView, UIScrollViewDelegate {
     /********************************** Delegate Methods ***************************************/
     //MARK:- Delegate Methods
     //MARK:- UIScrollViewDelegate -
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        timer?.invalidate()
+        timer = nil
+    }
+    
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         //如果用户手动拖动到了一个整数页的位置就不会发生滑动了 所以需要判断手动调用滑动停止滑动方法
@@ -199,6 +204,11 @@ class CirCleView: UIView, UIScrollViewDelegate {
         self.setScrollViewOfImage()
         //布局后把contentOffset设为中间
         scrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        
+        //重置计时器
+        if timer == nil {
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        }
     }
     
     //时间触发器 设置滑动时动画true，会触发的方法
