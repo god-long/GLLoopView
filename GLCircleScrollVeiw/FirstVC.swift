@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstVC: UIViewController {
+class FirstVC: UIViewController, CirCleViewDelegate {
 
     
     var circleView: CirCleView!
@@ -23,6 +23,7 @@ class FirstVC: UIViewController {
 
         self.circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArray: imageArray)
         circleView.backgroundColor = UIColor.orangeColor()
+        circleView.delegate = self
         self.view.addSubview(circleView)
         
         var tempButton = UIButton(frame: CGRectMake(0, 300, self.view.frame.size.width, 20))
@@ -51,13 +52,19 @@ class FirstVC: UIViewController {
     
     /********************************** Delegate Methods ***************************************/
     //MARK:- Delegate Methods
-    
+    //MARK:- CirCleViewDelegate Methods
+
+    func clickCurrentImage(currentIndxe: Int) {
+        print(currentIndxe);
+    }
     
 
     
     
     
-    
+    /***************************** End & ReceiveMe Methods ************************************/
+    //MARK:- End Methods
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

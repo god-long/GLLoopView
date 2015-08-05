@@ -224,6 +224,8 @@ class CirCleView: UIView, UIScrollViewDelegate {
 @objc protocol CirCleViewDelegate {
     /**
     *  点击图片的代理方法
+    *  
+    *  @para  currentIndxe 当前点击图片的下标
     */
     optional func clickCurrentImage(currentIndxe: Int)
 }
