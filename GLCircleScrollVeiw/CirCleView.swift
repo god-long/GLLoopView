@@ -16,7 +16,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
 
     var contentScrollView: UIScrollView!
     
-    var imageArray: [UIImage!]! {
+    public var imageArray: [UIImage!]! {
         //监听图片数组的变化，如果有变化立即刷新轮转图中显示的图片
         willSet(newValue) {
             self.imageArray = newValue
@@ -51,7 +51,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
         }
     }
 
-    var delegate: CirCleViewDelegate?
+    public var delegate: CirCleViewDelegate?
     
     var indexOfCurrentImage: Int!  {                // 当前显示的第几张图片
         //监听显示的第几张图片，来更新分页指示器
@@ -164,7 +164,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
     
     //事件触发方法
     func timerAction() {
-        print("timer", terminator: "")
+//        print("timer", terminator: "")
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width*2, 0), animated: true)
     }
 
@@ -213,7 +213,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
     
     //时间触发器 设置滑动时动画true，会触发的方法
     public func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-        print("animator", terminator: "")
+//        print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
     }
     
@@ -221,7 +221,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
 }
 
 
-@objc protocol CirCleViewDelegate {
+@objc public protocol CirCleViewDelegate {
     /**
     *  点击图片的代理方法
     *  
