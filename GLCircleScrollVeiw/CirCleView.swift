@@ -71,11 +71,11 @@ public class CirCleView: UIView, UIScrollViewDelegate {
     
     /*********************************** Begin ****************************************/
     //MARK:- Begin -
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, imageArray: [UIImage!]?) {
+    public convenience init(frame: CGRect, imageArray: [UIImage!]?) {
         self.init(frame: frame)
         self.imageArray = imageArray
 
