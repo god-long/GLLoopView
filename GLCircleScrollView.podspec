@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.author       = "god-long"
   s.source       = { git: "https://github.com/mouse-lin/GLCircleScrollView.git", tags: "1.0.0"}
   s.platform     = :ios, '8.0'
-  s.source_files = 'Classes/*'
+  s.source_files = 'GLCircleScrollVeiw/CirCleView.swift'
   s.requires_arc = true
 end
