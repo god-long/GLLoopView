@@ -102,7 +102,7 @@ public class CirCleView: UIView, UIScrollViewDelegate {
         self.addSubview(contentScrollView)
         
         self.currentImageView = UIImageView()
-        currentImageView.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
+        currentImageView.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)
         currentImageView.userInteractionEnabled = true
         currentImageView.contentMode = UIViewContentMode.ScaleAspectFill
         currentImageView.clipsToBounds = true
@@ -113,13 +113,13 @@ public class CirCleView: UIView, UIScrollViewDelegate {
         currentImageView.addGestureRecognizer(imageTap)
         
         self.lastImageView = UIImageView()
-        lastImageView.frame = CGRectMake(0, 0, self.frame.size.width, 200)
+        lastImageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
         lastImageView.contentMode = UIViewContentMode.ScaleAspectFill
         lastImageView.clipsToBounds = true
         contentScrollView.addSubview(lastImageView)
         
         self.nextImageView = UIImageView()
-        nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
+        nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, self.frame.size.height)
         nextImageView.contentMode = UIViewContentMode.ScaleAspectFill
         nextImageView.clipsToBounds = true
         contentScrollView.addSubview(nextImageView)
