@@ -19,14 +19,14 @@ class FirstVC: UIViewController, CirCleViewDelegate {
         super.viewDidLoad()
         self.title = "CirCle"
         self.automaticallyAdjustsScrollViewInsets = false
-        var imageArray: [UIImage!] = [UIImage(named: "first.jpg"), UIImage(named: "second.jpg"), UIImage(named: "third.jpg")]
+        let imageArray: [UIImage!] = [UIImage(named: "first.jpg"), UIImage(named: "second.jpg"), UIImage(named: "third.jpg")]
 
         self.circleView = CirCleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200), imageArray: imageArray)
         circleView.backgroundColor = UIColor.orangeColor()
         circleView.delegate = self
         self.view.addSubview(circleView)
         
-        var tempButton = UIButton(frame: CGRectMake(0, 300, self.view.frame.size.width, 20))
+        let tempButton = UIButton(frame: CGRectMake(0, 300, self.view.frame.size.width, 20))
         tempButton.backgroundColor = UIColor.redColor()
         tempButton.setTitle("appendImage", forState: UIControlState.Normal)
         tempButton.addTarget(self, action: Selector("setImage:"), forControlEvents: UIControlEvents.TouchUpInside)
@@ -55,7 +55,7 @@ class FirstVC: UIViewController, CirCleViewDelegate {
     //MARK:- CirCleViewDelegate Methods
 
     func clickCurrentImage(currentIndxe: Int) {
-        print(currentIndxe);
+        print(currentIndxe, terminator: "");
     }
     
 

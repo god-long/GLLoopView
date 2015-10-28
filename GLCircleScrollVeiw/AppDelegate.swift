@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.makeKeyAndVisible()
         
-        var firstVC = FirstVC()
-        var naviVC = UINavigationController(rootViewController: firstVC)
+        let firstVC = FirstVC()
+        let naviVC = UINavigationController(rootViewController: firstVC)
         self.window?.rootViewController = naviVC
         
         
