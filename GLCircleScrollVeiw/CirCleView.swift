@@ -12,7 +12,7 @@ let TimeInterval = 2.5          //全局的时间间隔
 
 class CirCleView: UIView, UIScrollViewDelegate {
     /*********************************** Property ****************************************/
-    //MARK:- Property -
+    //MARK:- Property
 
     var contentScrollView: UIScrollView!
     
@@ -40,11 +40,11 @@ class CirCleView: UIView, UIScrollViewDelegate {
         didSet {
             //这里用了强制拆包，所以不要把urlImageArray设为nil
             for urlStr in self.urlImageArray! {
-                var urlImage = NSURL(string: urlStr)
+                let urlImage = NSURL(string: urlStr)
                 if urlImage == nil { break }
-                var dataImage = NSData(contentsOfURL: urlImage!)
+                let dataImage = NSData(contentsOfURL: urlImage!)
                 if dataImage == nil { break }
-                var tempImage = UIImage(data: dataImage!)
+                let tempImage = UIImage(data: dataImage!)
                 if tempImage == nil { break }
                 imageArray.append(tempImage)
             }
@@ -70,7 +70,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     
     /*********************************** Begin ****************************************/
-    //MARK:- Begin -
+    //MARK:- Begin
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -84,7 +84,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         self.setUpCircleView()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -109,7 +109,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         contentScrollView.addSubview(currentImageView)
         
         //添加点击事件
-        var imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
+        let imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
         currentImageView.addGestureRecognizer(imageTap)
         
         self.lastImageView = UIImageView()
@@ -138,7 +138,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
     }
     
-    //MARK:- 设置图片
+    //MARK: 设置图片
     private func setScrollViewOfImage(){
         self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
         self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
@@ -147,7 +147,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     // 得到上一张图片的下标
     private func getLastImageIndex(indexOfCurrentImage index: Int) -> Int{
-        var tempIndex = index - 1
+        let tempIndex = index - 1
         if tempIndex == -1 {
             return self.imageArray.count - 1
         }else{
@@ -158,13 +158,13 @@ class CirCleView: UIView, UIScrollViewDelegate {
     // 得到下一张图片的下标
     private func getNextImageIndex(indexOfCurrentImage index: Int) -> Int
     {
-        var tempIndex = index + 1
+        let tempIndex = index + 1
         return tempIndex < self.imageArray.count ? tempIndex : 0
     }
     
     //事件触发方法
     func timerAction() {
-        print("timer")
+        print("timer", terminator: "")
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width*2, 0), animated: true)
     }
 
@@ -178,7 +178,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     /********************************** Delegate Methods ***************************************/
     //MARK:- Delegate Methods
-    //MARK:- UIScrollViewDelegate -
+    //MARK: UIScrollViewDelegate
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         timer?.invalidate()
         timer = nil
@@ -194,7 +194,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
 
-        var offset = scrollView.contentOffset.x
+        let offset = scrollView.contentOffset.x
         if offset == 0 {
             self.indexOfCurrentImage = self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
         }else if offset == self.frame.size.width * 2 {
@@ -213,12 +213,15 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     //时间触发器 设置滑动时动画true，会触发的方法
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-        print("animator")
+        print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
     }
     
 
 }
+
+/********************************** Protocol Methods ***************************************/
+//MARK:- Protocol Methods 
 
 
 @objc protocol CirCleViewDelegate {
