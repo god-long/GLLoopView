@@ -66,7 +66,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     var pageIndicator:      UIPageControl!          //页数指示器
     
-    var timer:              NSTimer?                 //计时器
+    var timer:              NSTimer?                //计时器
     
     
     /*********************************** Begin ****************************************/
@@ -216,7 +216,6 @@ class CirCleView: UIView, UIScrollViewDelegate {
         print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
     }
-    
 
 }
 

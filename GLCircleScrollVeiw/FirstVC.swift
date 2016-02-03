@@ -31,9 +31,6 @@ class FirstVC: UIViewController, CirCleViewDelegate {
         tempButton.setTitle("appendImage", forState: UIControlState.Normal)
         tempButton.addTarget(self, action: Selector("setImage:"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(tempButton)
-        
-
-        
     }
 
     
@@ -47,7 +44,6 @@ class FirstVC: UIViewController, CirCleViewDelegate {
     
     
     
-    
     /********************************** Delegate Methods ***************************************/
     //MARK:- Delegate Methods
     //MARK: CirCleViewDelegate Methods
@@ -57,7 +53,6 @@ class FirstVC: UIViewController, CirCleViewDelegate {
     }
     
 
-    
     
     
     /***************************** End & ReceiveMe Methods ************************************/
