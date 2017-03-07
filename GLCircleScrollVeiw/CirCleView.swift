@@ -16,7 +16,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
 
     var contentScrollView: UIScrollView!
     
-    var imageArray: [UIImage!]! {
+    var imageArray: [UIImage?]! {
         //监听图片数组的变化，如果有变化立即刷新轮转图中显示的图片
         willSet(newValue) {
             self.imageArray = newValue
@@ -25,8 +25,8 @@ class CirCleView: UIView, UIScrollViewDelegate {
         *  如果数据源改变，则需要改变scrollView、分页指示器的数量
         */
         didSet {
-            contentScrollView.scrollEnabled = !(imageArray.count == 1)
-            self.pageIndicator.frame = CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20)
+            contentScrollView.isScrollEnabled = !(imageArray.count == 1)
+            self.pageIndicator.frame = CGRect(x: self.frame.size.width - 20 * CGFloat(imageArray.count), y: self.frame.size.height - 30, width: 20 * CGFloat(imageArray.count), height: 20)
             self.pageIndicator?.numberOfPages = self.imageArray.count
             self.setScrollViewOfImage()
         }
@@ -40,9 +40,9 @@ class CirCleView: UIView, UIScrollViewDelegate {
         didSet {
             //这里用了强制拆包，所以不要把urlImageArray设为nil
             for urlStr in self.urlImageArray! {
-                let urlImage = NSURL(string: urlStr)
+                let urlImage = URL(string: urlStr)
                 if urlImage == nil { break }
-                let dataImage = NSData(contentsOfURL: urlImage!)
+                let dataImage = try? Data(contentsOf: urlImage!)
                 if dataImage == nil { break }
                 let tempImage = UIImage(data: dataImage!)
                 if tempImage == nil { break }
@@ -66,7 +66,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     var pageIndicator:      UIPageControl!          //页数指示器
     
-    var timer:              NSTimer?                //计时器
+    var timer:              Timer?                //计时器
     
     
     /*********************************** Begin ****************************************/
@@ -75,7 +75,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, imageArray: [UIImage!]?) {
+    convenience init(frame: CGRect, imageArray: [UIImage?]?) {
         self.init(frame: frame)
         self.imageArray = imageArray
 
@@ -90,63 +90,63 @@ class CirCleView: UIView, UIScrollViewDelegate {
     
     /********************************** Privite Methods ***************************************/
     //MARK:- Privite Methods
-    private func setUpCircleView() {
-        self.contentScrollView = UIScrollView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
-        contentScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 0)
+    fileprivate func setUpCircleView() {
+        self.contentScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
+        contentScrollView.contentSize = CGSize(width: self.frame.size.width * 3, height: 0)
         contentScrollView.delegate = self
         contentScrollView.bounces = false
-        contentScrollView.pagingEnabled = true
-        contentScrollView.backgroundColor = UIColor.greenColor()
+        contentScrollView.isPagingEnabled = true
+        contentScrollView.backgroundColor = UIColor.green
         contentScrollView.showsHorizontalScrollIndicator = false
-        contentScrollView.scrollEnabled = !(imageArray.count == 1)
+        contentScrollView.isScrollEnabled = !(imageArray.count == 1)
         self.addSubview(contentScrollView)
         
         self.currentImageView = UIImageView()
-        currentImageView.frame = CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)
-        currentImageView.userInteractionEnabled = true
-        currentImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        currentImageView.frame = CGRect(x: self.frame.size.width, y: 0, width: self.frame.size.width, height: 200)
+        currentImageView.isUserInteractionEnabled = true
+        currentImageView.contentMode = UIViewContentMode.scaleAspectFill
         currentImageView.clipsToBounds = true
         contentScrollView.addSubview(currentImageView)
         
         //添加点击事件
-        let imageTap = UITapGestureRecognizer(target: self, action: Selector("imageTapAction:"))
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(CirCleView.imageTapAction(_:)))
         currentImageView.addGestureRecognizer(imageTap)
         
         self.lastImageView = UIImageView()
-        lastImageView.frame = CGRectMake(0, 0, self.frame.size.width, 200)
-        lastImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        lastImageView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 200)
+        lastImageView.contentMode = UIViewContentMode.scaleAspectFill
         lastImageView.clipsToBounds = true
         contentScrollView.addSubview(lastImageView)
         
         self.nextImageView = UIImageView()
-        nextImageView.frame = CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, 200)
-        nextImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        nextImageView.frame = CGRect(x: self.frame.size.width * 2, y: 0, width: self.frame.size.width, height: 200)
+        nextImageView.contentMode = UIViewContentMode.scaleAspectFill
         nextImageView.clipsToBounds = true
         contentScrollView.addSubview(nextImageView)
         
         self.setScrollViewOfImage()
-        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        contentScrollView.setContentOffset(CGPoint(x: self.frame.size.width, y: 0), animated: false)
         
         //设置分页指示器
-        self.pageIndicator = UIPageControl(frame: CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20))
+        self.pageIndicator = UIPageControl(frame: CGRect(x: self.frame.size.width - 20 * CGFloat(imageArray.count), y: self.frame.size.height - 30, width: 20 * CGFloat(imageArray.count), height: 20))
         pageIndicator.hidesForSinglePage = true
         pageIndicator.numberOfPages = imageArray.count
-        pageIndicator.backgroundColor = UIColor.clearColor()
+        pageIndicator.backgroundColor = UIColor.clear
         self.addSubview(pageIndicator)
         
         //设置计时器
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval, target: self, selector: #selector(CirCleView.timerAction), userInfo: nil, repeats: true)
     }
     
     //MARK: 设置图片
-    private func setScrollViewOfImage(){
+    fileprivate func setScrollViewOfImage(){
         self.currentImageView.image = self.imageArray[self.indexOfCurrentImage]
         self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
         self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
     }
     
     // 得到上一张图片的下标
-    private func getLastImageIndex(indexOfCurrentImage index: Int) -> Int{
+    fileprivate func getLastImageIndex(indexOfCurrentImage index: Int) -> Int{
         let tempIndex = index - 1
         if tempIndex == -1 {
             return self.imageArray.count - 1
@@ -156,7 +156,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     }
     
     // 得到下一张图片的下标
-    private func getNextImageIndex(indexOfCurrentImage index: Int) -> Int
+    fileprivate func getNextImageIndex(indexOfCurrentImage index: Int) -> Int
     {
         let tempIndex = index + 1
         return tempIndex < self.imageArray.count ? tempIndex : 0
@@ -165,13 +165,13 @@ class CirCleView: UIView, UIScrollViewDelegate {
     //事件触发方法
     func timerAction() {
         print("timer", terminator: "")
-        contentScrollView.setContentOffset(CGPointMake(self.frame.size.width*2, 0), animated: true)
+        contentScrollView.setContentOffset(CGPoint(x: self.frame.size.width*2, y: 0), animated: true)
     }
 
     
     /********************************** Public Methods  ***************************************/
     //MARK:- Public Methods
-    func imageTapAction(tap: UITapGestureRecognizer){
+    func imageTapAction(_ tap: UITapGestureRecognizer){
         self.delegate?.clickCurrentImage!(indexOfCurrentImage)
     }
     
@@ -179,12 +179,12 @@ class CirCleView: UIView, UIScrollViewDelegate {
     /********************************** Delegate Methods ***************************************/
     //MARK:- Delegate Methods
     //MARK: UIScrollViewDelegate
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         timer?.invalidate()
         timer = nil
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         //如果用户手动拖动到了一个整数页的位置就不会发生滑动了 所以需要判断手动调用滑动停止滑动方法
         if !decelerate {
@@ -192,7 +192,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
         }
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 
         let offset = scrollView.contentOffset.x
         if offset == 0 {
@@ -203,16 +203,16 @@ class CirCleView: UIView, UIScrollViewDelegate {
         // 重新布局图片
         self.setScrollViewOfImage()
         //布局后把contentOffset设为中间
-        scrollView.setContentOffset(CGPointMake(self.frame.size.width, 0), animated: false)
+        scrollView.setContentOffset(CGPoint(x: self.frame.size.width, y: 0), animated: false)
         
         //重置计时器
         if timer == nil {
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(TimeInterval, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: TimeInterval, target: self, selector: #selector(CirCleView.timerAction), userInfo: nil, repeats: true)
         }
     }
     
     //时间触发器 设置滑动时动画true，会触发的方法
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         print("animator", terminator: "")
         self.scrollViewDidEndDecelerating(contentScrollView)
     }
@@ -229,7 +229,7 @@ class CirCleView: UIView, UIScrollViewDelegate {
     *  
     *  @para  currentIndxe 当前点击图片的下标
     */
-    optional func clickCurrentImage(currentIndxe: Int)
+    @objc optional func clickCurrentImage(_ currentIndxe: Int)
 }
 
 
