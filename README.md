@@ -1,4 +1,6 @@
 # GLCircleScrollView
+
+[![Join the chat at https://gitter.im/god-long/GLCircleScrollView](https://badges.gitter.im/god-long/GLCircleScrollView.svg)](https://gitter.im/god-long/GLCircleScrollView?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 无限循环轮播图
 
 
