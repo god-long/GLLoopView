@@ -1,22 +1,74 @@
 # GLCircleScrollView
-无限循环轮播图
+
+### Swift版无限循环轮播图
+
+####描述：
+**swift版的无限循环轮播图，可自定义时间间隔，设置本地、远端图片或混设，目前配合[Kingfisher](https://github.com/onevcat/Kingfisher)一起使用（url图片赋值ImageView和缓存）。**
 
 
-* GLCircleScrollView 有以下主要功能：
+####功能：
 
-   > 无限循环轮播
+   * 无限循环轮播
    
-   > 图片点击代理
+   * 图片点击代理
    
-   > 可设置图片Url的数组（如果要赋url数组的话，最好自己改成sd加载图片的方式）
+   * 本地、远端图片浑设
+   
+   * 支持code、xib、storyboard调用
+   
+   * 支持旋转
 
 
-    ![](https://github.com/god-long/GLCircleScrollView/raw/master/Circle.gif) 
+####运行展示图：
+
+  ![运行展示](https://github.com/god-long/GLCircleScrollView/raw/master/Circle.gif) 
 
    
-* 使用方法：
+####使用方法：
+下载后直接把CircleView.swift这个文件拉进项目中即可。
 
-   > 下载后直接把CirCleView.swift这个文件拉进项目中即可。
+pod添加kingfisher
+
+#####xib || storyboard:
+```
+        let imageArray: [GLImageModel] = [GLImageModel("first.jpg", type: .local), GLImageModel("second.jpg", type: .local), GLImageModel("third.jpg", type: .local)]
+        
+        self.circleView.imageModelArray = imageArray
+        self.circleView.timeInterval = 5
+        self.circleView.clickCircleViewClosure = { currentIndex in
+            print(currentIndex, terminator: " ");
+        }
+
+```
+
+
+
+#####code: (能用可视化就用可视化，不要再代码创建了)
+```
+        let imageArray: [GLImageModel] = [GLImageModel("first.jpg", type: .local), GLImageModel("second.jpg", type: .local), GLImageModel("third.jpg", type: .local)]
+        
+        self.circleView = GLCircleView(frame: CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: 200))
+        self.circleView.imageModelArray = imageArray
+        self.circleView.timeInterval = 5
+        self.circleView.clickCircleViewClosure = { currentIndex in
+            print(currentIndex, terminator: " ");
+        }
+        self.view.addSubview(circleView)
+
+```
    
+添加
+  
+```
+        let urlImageModel = GLImageModel(self.circleView.imageModelArray.count % 2 == 0 ? url1 : url2, type: .url)
+        self.circleView.imageModelArray.append(urlImageModel)
 
-  *这个基本上是最简单的版本了，后续会添加一些其他的功能*
+```
+
+
+####下步计划：
+  * 支持pod
+  
+  * 开放更多功能
+  
+
