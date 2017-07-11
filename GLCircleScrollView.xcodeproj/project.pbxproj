@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		087D455BC87DC313FB9790F1 /* Pods_GLCircleScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F28C6B4445BFBDD6E6B210 /* Pods_GLCircleScrollView.framework */; };
+		6287273E1F13623200B4571D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6287273D1F13623200B4571D /* AppDelegate.swift */; };
+		628727431F13623200B4571D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628727411F13623200B4571D /* Main.storyboard */; };
+		628727451F13623200B4571D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628727441F13623200B4571D /* Assets.xcassets */; };
+		628727481F13623200B4571D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628727461F13623200B4571D /* LaunchScreen.storyboard */; };
+		628727501F13625900B4571D /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6287274F1F13625900B4571D /* third.jpg */; };
+		628727521F13626100B4571D /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 628727511F13626100B4571D /* second.jpg */; };
+		628727541F13626600B4571D /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 628727531F13626600B4571D /* first.jpg */; };
+		628727561F13627C00B4571D /* GLCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628727551F13627C00B4571D /* GLCircleView.swift */; };
+		628727591F1362ED00B4571D /* ShowCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628727571F1362ED00B4571D /* ShowCircleViewController.swift */; };
+		6287275C1F14761500B4571D /* GLCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6287275B1F14761500B4571D /* GLCircleView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6287273A1F13623200B4571D /* GLCircleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLCircleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6287273D1F13623200B4571D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		628727421F13623200B4571D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		628727441F13623200B4571D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		628727471F13623200B4571D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		628727491F13623200B4571D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6287274F1F13625900B4571D /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = third.jpg; sourceTree = "<group>"; };
+		628727511F13626100B4571D /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
+		628727531F13626600B4571D /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
+		628727551F13627C00B4571D /* GLCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLCircleView.swift; sourceTree = "<group>"; };
+		628727571F1362ED00B4571D /* ShowCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCircleViewController.swift; sourceTree = "<group>"; };
+		6287275B1F14761500B4571D /* GLCircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLCircleView.xib; sourceTree = "<group>"; };
+		77F28C6B4445BFBDD6E6B210 /* Pods_GLCircleScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCircleScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE362AA565218D6B0794FFDC /* Pods-GLCircleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCircleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		E33FCBE33C3D5B59CA43B748 /* Pods-GLCircleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCircleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		628727371F13623200B4571D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087D455BC87DC313FB9790F1 /* Pods_GLCircleScrollView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3ABC43C637B4683F22AD4CFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77F28C6B4445BFBDD6E6B210 /* Pods_GLCircleScrollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AC7359D7C90FA566EF33316 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE362AA565218D6B0794FFDC /* Pods-GLCircleScrollView.debug.xcconfig */,
+				E33FCBE33C3D5B59CA43B748 /* Pods-GLCircleScrollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		628727311F13623200B4571D = {
+			isa = PBXGroup;
+			children = (
+				6287273C1F13623200B4571D /* GLCircleScrollView */,
+				6287273B1F13623200B4571D /* Products */,
+				4AC7359D7C90FA566EF33316 /* Pods */,
+				3ABC43C637B4683F22AD4CFC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6287273B1F13623200B4571D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6287273A1F13623200B4571D /* GLCircleScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6287273C1F13623200B4571D /* GLCircleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6287274F1F13625900B4571D /* third.jpg */,
+				628727511F13626100B4571D /* second.jpg */,
+				628727531F13626600B4571D /* first.jpg */,
+				6287273D1F13623200B4571D /* AppDelegate.swift */,
+				628727571F1362ED00B4571D /* ShowCircleViewController.swift */,
+				628727551F13627C00B4571D /* GLCircleView.swift */,
+				6287275B1F14761500B4571D /* GLCircleView.xib */,
+				628727411F13623200B4571D /* Main.storyboard */,
+				628727441F13623200B4571D /* Assets.xcassets */,
+				628727461F13623200B4571D /* LaunchScreen.storyboard */,
+				628727491F13623200B4571D /* Info.plist */,
+			);
+			path = GLCircleScrollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		628727391F13623200B4571D /* GLCircleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6287274C1F13623200B4571D /* Build configuration list for PBXNativeTarget "GLCircleScrollView" */;
+			buildPhases = (
+				430E919B74A3176FDD4D99B4 /* [CP] Check Pods Manifest.lock */,
+				628727361F13623200B4571D /* Sources */,
+				628727371F13623200B4571D /* Frameworks */,
+				628727381F13623200B4571D /* Resources */,
+				DF94FEE7A23590D1833771C7 /* [CP] Embed Pods Frameworks */,
+				C2360296A487E9078210A6C7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLCircleScrollView;
+			productName = GLCircleScrollView;
+			productReference = 6287273A1F13623200B4571D /* GLCircleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		628727321F13623200B4571D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = loongod;
+				TargetAttributes = {
+					628727391F13623200B4571D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9BW9888484;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 628727351F13623200B4571D /* Build configuration list for PBXProject "GLCircleScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 628727311F13623200B4571D;
+			productRefGroup = 6287273B1F13623200B4571D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				628727391F13623200B4571D /* GLCircleScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		628727381F13623200B4571D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628727541F13626600B4571D /* first.jpg in Resources */,
+				628727481F13623200B4571D /* LaunchScreen.storyboard in Resources */,
+				628727451F13623200B4571D /* Assets.xcassets in Resources */,
+				6287275C1F14761500B4571D /* GLCircleView.xib in Resources */,
+				628727431F13623200B4571D /* Main.storyboard in Resources */,
+				628727501F13625900B4571D /* third.jpg in Resources */,
+				628727521F13626100B4571D /* second.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		430E919B74A3176FDD4D99B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2360296A487E9078210A6C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF94FEE7A23590D1833771C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		628727361F13623200B4571D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6287273E1F13623200B4571D /* AppDelegate.swift in Sources */,
+				628727561F13627C00B4571D /* GLCircleView.swift in Sources */,
+				628727591F1362ED00B4571D /* ShowCircleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		628727411F13623200B4571D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				628727421F13623200B4571D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		628727461F13623200B4571D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				628727471F13623200B4571D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6287274A1F13623200B4571D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6287274B1F13623200B4571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6287274D1F13623200B4571D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE362AA565218D6B0794FFDC /* Pods-GLCircleScrollView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9BW9888484;
+				INFOPLIST_FILE = GLCircleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GL.GLCircleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6287274E1F13623200B4571D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33FCBE33C3D5B59CA43B748 /* Pods-GLCircleScrollView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9BW9888484;
+				INFOPLIST_FILE = GLCircleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GL.GLCircleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		628727351F13623200B4571D /* Build configuration list for PBXProject "GLCircleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6287274A1F13623200B4571D /* Debug */,
+				6287274B1F13623200B4571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6287274C1F13623200B4571D /* Build configuration list for PBXNativeTarget "GLCircleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6287274D1F13623200B4571D /* Debug */,
+				6287274E1F13623200B4571D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 628727321F13623200B4571D /* Project object */;
+}

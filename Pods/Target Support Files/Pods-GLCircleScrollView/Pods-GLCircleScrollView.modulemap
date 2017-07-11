@@ -1,0 +1,6 @@
+framework module Pods_GLCircleScrollView {
+  umbrella header "Pods-GLCircleScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}
