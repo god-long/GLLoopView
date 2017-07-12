@@ -17,6 +17,8 @@
    * 支持code、xib、storyboard调用
    
    * 支持旋转
+   
+   * 支持iPhone、iPad
 
 
 #### 运行展示图：
