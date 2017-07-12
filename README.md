@@ -28,7 +28,7 @@
    
 #### 使用方法：
 
-下载后直接把CircleView.swift这个文件拉进项目中即可。
+下载后直接把CircleView.swift和CircleView.xib这2个文件拉进项目中
 
 pod添加kingfisher
 
