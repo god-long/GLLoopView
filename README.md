@@ -1,10 +1,10 @@
 # GLCircleScrollView
 
-### Swift版无限循环轮播图
+## Swift版无限循环轮播图
 
 ####描述：
 
-**swift版的无限循环轮播图，可自定义时间间隔，设置本地、远端图片或混设，目前配合[Kingfisher](https://github.com/onevcat/Kingfisher)一起使用（url图片赋值ImageView和缓存）。**
+   **swift版的无限循环轮播图，可自定义时间间隔，设置本地、远端图片或混设，目前配合[Kingfisher](https://github.com/onevcat/Kingfisher)一起使用（url图片赋值ImageView和缓存）。**
 
 
 ####功能：
@@ -31,7 +31,7 @@
 
 pod添加kingfisher
 
-#####xib || storyboard:
+**xib || storyboard:**
 
 ```
         let imageArray: [GLImageModel] = [GLImageModel("first.jpg", type: .local), GLImageModel("second.jpg", type: .local), GLImageModel("third.jpg", type: .local)]
@@ -45,7 +45,7 @@ pod添加kingfisher
 ```
 
 
-#####code: (能用可视化就用可视化，不要再代码创建了)
+**code: (能用可视化就用可视化，不要再代码创建了)**
 
 ```
         let imageArray: [GLImageModel] = [GLImageModel("first.jpg", type: .local), GLImageModel("second.jpg", type: .local), GLImageModel("third.jpg", type: .local)]
@@ -60,7 +60,7 @@ pod添加kingfisher
 
 ```
    
-添加
+**添加：**
   
 ```
         let urlImageModel = GLImageModel(self.circleView.imageModelArray.count % 2 == 0 ? url1 : url2, type: .url)
@@ -74,5 +74,9 @@ pod添加kingfisher
   * 支持pod
   
   * 开放更多功能
+
+  
+ **如有意见，欢迎issue**
+
   
 

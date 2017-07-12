@@ -32,7 +32,7 @@
                                     <action selector="appendImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzZ-Tm-P5O"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2b-fU-8p1" customClass="GLCircleView" customModule="GLCircleScrollView" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2b-fU-8p1" customClass="GLCircleView" customModule="GLCircleScrollView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -51,6 +51,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BCD-AL-NQP"/>
+                    <connections>
+                        <outlet property="circleView" destination="c2b-fU-8p1" id="c8g-sI-fIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -237,7 +237,9 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     //MARK: UIScrollViewDelegate
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         // 用户拖动时，把计时器停掉
-        self.timer?.fireDate = Date.distantFuture
+        if self.enableTimer {
+            self.timer?.fireDate = Date.distantFuture
+        }
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -245,6 +247,10 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
         //如果用户手动拖动到了一个整数页的位置就不会发生滑动了 所以需要判断手动调用滑动停止滑动方法
         if !decelerate {
             self.scrollViewDidEndDecelerating(scrollView)
+        }
+        // 用户拖动结束，打开计时器
+        if self.enableTimer {
+            self.timer?.fireDate = Date(timeIntervalSinceNow: 5.0)
         }
     }
     
@@ -260,11 +266,6 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
         self.setScrollViewOfImage()
         //布局后把contentOffset设为中间
         scrollView.setContentOffset(CGPoint(x: self.frame.size.width, y: 0), animated: false)
-        
-        // 重置计时器
-        if self.timer == nil && self.enableTimer {
-            self.timer?.fireDate = Date.distantPast
-        }
     }
     
     // 时间触发器 设置滑动时动画true，会触发的方法

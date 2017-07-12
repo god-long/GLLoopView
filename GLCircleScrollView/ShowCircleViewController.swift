@@ -13,7 +13,7 @@ let url2 = "https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/wenku/q%3D90%3Bw%
 
 class ShowCircleViewController: UIViewController {
 
-    var circleView: GLCircleView!
+    @IBOutlet weak var circleView: GLCircleView!
     
     /********************************** System Methods *****************************************/
     //MARK:- System Methods
@@ -26,13 +26,11 @@ class ShowCircleViewController: UIViewController {
         
         let imageArray: [GLImageModel] = [GLImageModel("first.jpg", type: .local), GLImageModel("second.jpg", type: .local), GLImageModel("third.jpg", type: .local)]
         
-        self.circleView = GLCircleView(frame: CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: 200))
         self.circleView.imageModelArray = imageArray
         self.circleView.timeInterval = 5
         self.circleView.clickCircleViewClosure = { currentIndex in
             print(currentIndex, terminator: " ");
         }
-        self.view.addSubview(circleView)
     }
     
     
