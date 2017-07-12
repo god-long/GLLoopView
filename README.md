@@ -1,31 +1,30 @@
-# GLCircleScrollView
+# GLCircleView
 
-## Swift版无限循环轮播图
 
-####描述：
+#### 描述：
 
    **swift版的无限循环轮播图，可自定义时间间隔，设置本地、远端图片或混设，目前配合[Kingfisher](https://github.com/onevcat/Kingfisher)一起使用（url图片赋值ImageView和缓存）。**
 
 
-####功能：
+#### 功能：
 
    * 无限循环轮播
    
    * 图片点击代理
    
-   * 本地、远端图片浑设
+   * 本地、远端图片混设
    
    * 支持code、xib、storyboard调用
    
    * 支持旋转
 
 
-####运行展示图：
+#### 运行展示图：
 
 ![运行展示](https://github.com/god-long/GLCircleScrollView/raw/master/Circle.gif) 
 
    
-####使用方法：
+#### 使用方法：
 
 下载后直接把CircleView.swift这个文件拉进项目中即可。
 
@@ -69,7 +68,7 @@ pod添加kingfisher
 ```
 
 
-####下步计划：
+#### 下步计划：
 
   * 支持pod
   
