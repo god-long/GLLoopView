@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		087D455BC87DC313FB9790F1 /* Pods_GLCircleScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F28C6B4445BFBDD6E6B210 /* Pods_GLCircleScrollView.framework */; };
+		62519FAF1F25D64F00B033B8 /* GLCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62519FAD1F25D64F00B033B8 /* GLCircleView.swift */; };
+		62519FB01F25D64F00B033B8 /* GLCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62519FAE1F25D64F00B033B8 /* GLCircleView.xib */; };
 		6287273E1F13623200B4571D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6287273D1F13623200B4571D /* AppDelegate.swift */; };
 		628727431F13623200B4571D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628727411F13623200B4571D /* Main.storyboard */; };
 		628727451F13623200B4571D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628727441F13623200B4571D /* Assets.xcassets */; };
@@ -15,12 +17,12 @@
 		628727501F13625900B4571D /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6287274F1F13625900B4571D /* third.jpg */; };
 		628727521F13626100B4571D /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 628727511F13626100B4571D /* second.jpg */; };
 		628727541F13626600B4571D /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 628727531F13626600B4571D /* first.jpg */; };
-		628727561F13627C00B4571D /* GLCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628727551F13627C00B4571D /* GLCircleView.swift */; };
 		628727591F1362ED00B4571D /* ShowCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628727571F1362ED00B4571D /* ShowCircleViewController.swift */; };
-		6287275C1F14761500B4571D /* GLCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6287275B1F14761500B4571D /* GLCircleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62519FAD1F25D64F00B033B8 /* GLCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLCircleView.swift; sourceTree = "<group>"; };
+		62519FAE1F25D64F00B033B8 /* GLCircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLCircleView.xib; sourceTree = "<group>"; };
 		6287273A1F13623200B4571D /* GLCircleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLCircleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6287273D1F13623200B4571D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		628727421F13623200B4571D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,9 +32,7 @@
 		6287274F1F13625900B4571D /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = third.jpg; sourceTree = "<group>"; };
 		628727511F13626100B4571D /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
 		628727531F13626600B4571D /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
-		628727551F13627C00B4571D /* GLCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLCircleView.swift; sourceTree = "<group>"; };
 		628727571F1362ED00B4571D /* ShowCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCircleViewController.swift; sourceTree = "<group>"; };
-		6287275B1F14761500B4571D /* GLCircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLCircleView.xib; sourceTree = "<group>"; };
 		77F28C6B4445BFBDD6E6B210 /* Pods_GLCircleScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCircleScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE362AA565218D6B0794FFDC /* Pods-GLCircleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCircleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		E33FCBE33C3D5B59CA43B748 /* Pods-GLCircleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCircleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLCircleScrollView/Pods-GLCircleScrollView.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +67,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		62519FAC1F25D64F00B033B8 /* GLLoopView */ = {
+			isa = PBXGroup;
+			children = (
+				62519FAD1F25D64F00B033B8 /* GLCircleView.swift */,
+				62519FAE1F25D64F00B033B8 /* GLCircleView.xib */,
+			);
+			path = GLLoopView;
+			sourceTree = "<group>";
+		};
 		628727311F13623200B4571D = {
 			isa = PBXGroup;
 			children = (
@@ -88,13 +97,12 @@
 		6287273C1F13623200B4571D /* GLCircleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				62519FAC1F25D64F00B033B8 /* GLLoopView */,
 				6287274F1F13625900B4571D /* third.jpg */,
 				628727511F13626100B4571D /* second.jpg */,
 				628727531F13626600B4571D /* first.jpg */,
 				6287273D1F13623200B4571D /* AppDelegate.swift */,
 				628727571F1362ED00B4571D /* ShowCircleViewController.swift */,
-				628727551F13627C00B4571D /* GLCircleView.swift */,
-				6287275B1F14761500B4571D /* GLCircleView.xib */,
 				628727411F13623200B4571D /* Main.storyboard */,
 				628727441F13623200B4571D /* Assets.xcassets */,
 				628727461F13623200B4571D /* LaunchScreen.storyboard */,
@@ -169,7 +177,7 @@
 				628727541F13626600B4571D /* first.jpg in Resources */,
 				628727481F13623200B4571D /* LaunchScreen.storyboard in Resources */,
 				628727451F13623200B4571D /* Assets.xcassets in Resources */,
-				6287275C1F14761500B4571D /* GLCircleView.xib in Resources */,
+				62519FB01F25D64F00B033B8 /* GLCircleView.xib in Resources */,
 				628727431F13623200B4571D /* Main.storyboard in Resources */,
 				628727501F13625900B4571D /* third.jpg in Resources */,
 				628727521F13626100B4571D /* second.jpg in Resources */,
@@ -232,8 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6287273E1F13623200B4571D /* AppDelegate.swift in Sources */,
-				628727561F13627C00B4571D /* GLCircleView.swift in Sources */,
 				628727591F1362ED00B4571D /* ShowCircleViewController.swift in Sources */,
+				62519FAF1F25D64F00B033B8 /* GLCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
