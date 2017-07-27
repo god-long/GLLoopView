@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vw7-Np-9cq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLLoopView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GLLoopViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXF-Ku-i2J" customClass="GLLoopView" customModule="GLLoopViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Qs1-R9-Y3p"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlA-wi-nzj">
+                                <rect key="frame" x="0.0" y="404" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.65098041299999998" green="0.90588235859999999" blue="0.76862746479999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h8f-An-zSC"/>
+                                </constraints>
+                                <state key="normal" title="appendImage"/>
+                                <connections>
+                                    <action selector="appendImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCX-sC-N4f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iXF-Ku-i2J" secondAttribute="trailing" id="1hb-dm-t4n"/>
+                            <constraint firstItem="UlA-wi-nzj" firstAttribute="top" secondItem="iXF-Ku-i2J" secondAttribute="bottom" constant="40" id="ian-JQ-PbI"/>
+                            <constraint firstItem="iXF-Ku-i2J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jUd-TO-Cra"/>
+                            <constraint firstItem="UlA-wi-nzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mfA-L3-5SB"/>
+                            <constraint firstItem="iXF-Ku-i2J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tWG-5U-Nae"/>
+                            <constraint firstAttribute="trailing" secondItem="UlA-wi-nzj" secondAttribute="trailing" id="yEx-NG-Vs4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GLLoopView" id="7Sg-a2-MzF"/>
+                    <connections>
+                        <outlet property="loopView" destination="iXF-Ku-i2J" id="gxX-iN-6IZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="60.719640179910051"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3IC-vV-ufg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vw7-Np-9cq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zpQ-Bg-1Zs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rvo-aN-RH4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i29-Fc-AkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="-622.03898050974522"/>
+        </scene>
+    </scenes>
+</document>
