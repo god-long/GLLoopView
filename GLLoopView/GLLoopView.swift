@@ -1,9 +1,10 @@
 //
-//  CirCleView.swift
-//  GLCircleScrollVeiw
+//  GLLoopView.swift
+//  GLLoopViewDemo
 //
-//  Created by god、long on 15/7/3.
-//  Copyright (c) 2015年 ___GL___. All rights reserved.
+//  https://github.com/god-long/GLLoopView
+//  Created by 许龙 on 2017/7/27.
+//  Copyright © 2017年 loongod. All rights reserved.
 //
 
 import UIKit
@@ -38,13 +39,13 @@ class GLImageModel: NSObject {
 
 
 
-typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
+typealias ClickLoopViewClosure = (_ currentIndex: Int) -> Void
 
 
-@IBDesignable class GLCircleView: UIView, UIScrollViewDelegate {
+@IBDesignable class GLLoopView: UIView, UIScrollViewDelegate {
     /*********************************** Property ****************************************/
     //MARK:- Public Property 供外界调用和更改
-
+    
     /// 滑动的时间间隔
     @IBInspectable public var timeInterval: Double = 2.5 {
         didSet {
@@ -55,7 +56,7 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
             }
         }
     }
-
+    
     @IBInspectable public var enableTimer: Bool = true {
         didSet {
             if self.enableTimer {
@@ -79,7 +80,7 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     }
     
     /// 点击图片的代理方法 当前点击图片的下标
-    public var clickCircleViewClosure: ClickCircleViewClosure?
+    public var clickLoopViewClosure: ClickLoopViewClosure?
     
     
     //MARK: Private Property
@@ -93,7 +94,7 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     }
     /// 滑动的ScrollView
     @IBOutlet weak private var contentScrollView: UIScrollView!
-
+    
     /// 当前显示
     @IBOutlet weak private var currentImageView: UIImageView!
     /// 上一个
@@ -115,8 +116,8 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     /// 代码初始化
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let bundle = Bundle(for: GLCircleView.self)
-        let nib = UINib(nibName: String(describing: GLCircleView.self), bundle: bundle)
+        let bundle = Bundle(for: GLLoopView.self)
+        let nib = UINib(nibName: String(describing: GLLoopView.self), bundle: bundle)
         self.contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         self.addSubview(contentView)
         self.contentView.frame = bounds
@@ -125,31 +126,31 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
         // 默认显示第一张图片
         self.indexOfCurrentImage = 0
         self.imageModelArray = []
-        self.setUpCircleView()
+        self.setUpLoopView()
     }
     
     /// xib初始化
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let bundle = Bundle(for: GLCircleView.self)
-        let nib = UINib(nibName: String(describing: GLCircleView.self), bundle: bundle)
+        let bundle = Bundle(for: GLLoopView.self)
+        let nib = UINib(nibName: String(describing: GLLoopView.self), bundle: bundle)
         self.contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         self.addSubview(contentView)
         self.contentView.frame = bounds
         self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    
+        
         // 默认显示第一张图片
         self.indexOfCurrentImage = 0
         self.imageModelArray = []
-        self.setUpCircleView()
+        self.setUpLoopView()
     }
     
     
     /********************************** Privite Methods ***************************************/
     //MARK:- Privite Methods
-    /// 配置CircleView
-    fileprivate func setUpCircleView() {
-
+    /// 配置LoopView
+    fileprivate func setUpLoopView() {
+        
         // 添加点击事件
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(self.imageTapAction(_:)))
         currentImageView.addGestureRecognizer(imageTap)
@@ -159,7 +160,7 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
         
         // 设置分页指示器
         self.pageIndicator.numberOfPages = self.imageModelArray.count
-
+        
         // 设置计时器
         if self.timer == nil && self.enableTimer {
             self.timer = Timer.scheduledTimer(timeInterval: self.timeInterval, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
@@ -213,23 +214,19 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     
     /// 计时器触发方法
     @objc fileprivate func timerAction() {
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "HH:mm:ss.SSS"
-        print(formatter.string(from: Date()), "timeAction", terminator: "  ")
-        
-        contentScrollView.setContentOffset(CGPoint(x: self.frame.size.width*2, y: 0), animated: true)
+
+        contentScrollView.setContentOffset(CGPoint(x: self.frame.size.width * 2, y: 0), animated: true)
     }
     
     /// 点击轮播图
     @objc fileprivate func imageTapAction(_ tap: UITapGestureRecognizer){
-        self.clickCircleViewClosure?(self.indexOfCurrentImage)
+        self.clickLoopViewClosure?(self.indexOfCurrentImage)
     }
     
     /********************************** Public Methods  ***************************************/
     //MARK:- Public Methods
     
-
+    
     
     
     /********************************** Delegate Methods ***************************************/
@@ -255,7 +252,7 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-
+        
         let offset = scrollView.contentOffset.x
         if offset == 0 {
             self.indexOfCurrentImage = self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)
@@ -277,17 +274,6 @@ typealias ClickCircleViewClosure = (_ currentIndex: Int) -> Void
         super.layoutSubviews()
         // 适配旋转，始终显示中间的ImageView
         self.contentScrollView.setContentOffset(CGPoint(x: self.frame.size.width, y: 0), animated: false)
-
+        
     }
 }
-
-
-
-
-
-
-
-
-
-
-

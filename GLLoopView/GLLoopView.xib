@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GLLoopView" customModule="GLLoopViewDemo">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="enableTimer" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="timeInterval">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="contentScrollView" destination="gYD-qP-nrt" id="4z7-Zb-RNU"/>
+                <outlet property="currentImageView" destination="Agr-5B-SZ7" id="qM9-MF-QvY"/>
+                <outlet property="lastImageView" destination="RuI-ZC-ArH" id="veM-MK-ej7"/>
+                <outlet property="nextImageView" destination="xhP-fc-Jkh" id="vpQ-N4-aJH"/>
+                <outlet property="pageIndicator" destination="emp-C8-9AU" id="vcH-vJ-ZNG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYD-qP-nrt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-ZC-ArH" userLabel="lastImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                        </imageView>
+                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-5B-SZ7" userLabel="currentImageView">
+                            <rect key="frame" x="375" y="0.0" width="375" height="180"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-fc-Jkh" userLabel="nextImageView">
+                            <rect key="frame" x="750" y="0.0" width="375" height="180"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="RuI-ZC-ArH" firstAttribute="top" secondItem="gYD-qP-nrt" secondAttribute="top" id="D1n-Iy-z9I"/>
+                        <constraint firstItem="RuI-ZC-ArH" firstAttribute="width" secondItem="gYD-qP-nrt" secondAttribute="width" id="FjB-fE-kD8"/>
+                        <constraint firstItem="xhP-fc-Jkh" firstAttribute="height" secondItem="gYD-qP-nrt" secondAttribute="height" id="IPY-cw-4tK"/>
+                        <constraint firstItem="RuI-ZC-ArH" firstAttribute="leading" secondItem="gYD-qP-nrt" secondAttribute="leading" id="Lef-ZL-z5Q"/>
+                        <constraint firstAttribute="bottom" secondItem="RuI-ZC-ArH" secondAttribute="bottom" id="Xgb-8d-g09"/>
+                        <constraint firstItem="xhP-fc-Jkh" firstAttribute="top" secondItem="gYD-qP-nrt" secondAttribute="top" id="cId-lc-GvJ"/>
+                        <constraint firstItem="xhP-fc-Jkh" firstAttribute="width" secondItem="gYD-qP-nrt" secondAttribute="width" id="dnv-JM-Tfm"/>
+                        <constraint firstItem="RuI-ZC-ArH" firstAttribute="height" secondItem="gYD-qP-nrt" secondAttribute="height" id="eUp-ne-PBW"/>
+                        <constraint firstItem="xhP-fc-Jkh" firstAttribute="leading" secondItem="Agr-5B-SZ7" secondAttribute="trailing" id="h4a-qJ-bCn"/>
+                        <constraint firstItem="Agr-5B-SZ7" firstAttribute="height" secondItem="gYD-qP-nrt" secondAttribute="height" id="jNq-4q-mfC"/>
+                        <constraint firstAttribute="bottom" secondItem="Agr-5B-SZ7" secondAttribute="bottom" id="kBW-fU-xif"/>
+                        <constraint firstItem="Agr-5B-SZ7" firstAttribute="width" secondItem="gYD-qP-nrt" secondAttribute="width" id="o8Z-g6-beS"/>
+                        <constraint firstAttribute="trailing" secondItem="xhP-fc-Jkh" secondAttribute="trailing" id="s8d-Vs-xcy"/>
+                        <constraint firstAttribute="bottom" secondItem="xhP-fc-Jkh" secondAttribute="bottom" id="tAd-dn-mfI"/>
+                        <constraint firstItem="Agr-5B-SZ7" firstAttribute="top" secondItem="gYD-qP-nrt" secondAttribute="top" id="xdy-fh-kD9"/>
+                        <constraint firstItem="Agr-5B-SZ7" firstAttribute="leading" secondItem="RuI-ZC-ArH" secondAttribute="trailing" id="yd6-ij-ZJ9"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="rj6-N4-FeV"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="emp-C8-9AU">
+                    <rect key="frame" x="321" y="140" width="39" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="NWQ-mh-Vxp"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gYD-qP-nrt" secondAttribute="bottom" id="5a5-VD-ts3"/>
+                <constraint firstItem="gYD-qP-nrt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FGS-qV-OqQ"/>
+                <constraint firstAttribute="bottom" secondItem="emp-C8-9AU" secondAttribute="bottom" constant="20" id="IpA-2B-M6n"/>
+                <constraint firstAttribute="trailing" secondItem="gYD-qP-nrt" secondAttribute="trailing" id="clF-FE-9xc"/>
+                <constraint firstItem="gYD-qP-nrt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s0b-0i-Gre"/>
+                <constraint firstAttribute="trailing" secondItem="emp-C8-9AU" secondAttribute="trailing" constant="15" id="x54-Ay-N4z"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="18.5" y="-118"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="first.jpg" width="400" height="225"/>
+    </resources>
+</document>
