@@ -247,7 +247,7 @@ typealias ClickLoopViewClosure = (_ currentIndex: Int) -> Void
         }
         // 用户拖动结束，打开计时器
         if self.enableTimer {
-            self.timer?.fireDate = Date(timeIntervalSinceNow: 5.0)
+            self.timer?.fireDate = Date(timeIntervalSinceNow: self.timeInterval)
         }
     }
     

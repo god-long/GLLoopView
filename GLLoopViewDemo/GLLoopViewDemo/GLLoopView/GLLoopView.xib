@@ -32,13 +32,13 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYD-qP-nrt">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-ZC-ArH" userLabel="lastImageView">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-ZC-ArH" userLabel="lastImageView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                         </imageView>
-                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-5B-SZ7" userLabel="currentImageView">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-5B-SZ7" userLabel="currentImageView">
                             <rect key="frame" x="375" y="0.0" width="375" height="180"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-fc-Jkh" userLabel="nextImageView">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-fc-Jkh" userLabel="nextImageView">
                             <rect key="frame" x="750" y="0.0" width="375" height="180"/>
                         </imageView>
                     </subviews>
